@@ -1,6 +1,6 @@
 <?php
 
-namespace ITG\PostfixBundle\Controller;
+namespace Hollo\PostfixBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -11,19 +11,19 @@ class DefaultController extends Controller
   {
     $em = $this->getDoctrine()->getEntityManager();
 
-    $transport = $em->getRepository('ITGPostfixBundle:Transport')->findAll();
+    $transport = $em->getRepository('HolloPostfixBundle:Transport')->findAll();
 
-    return $this->render('ITGPostfixBundle:Default:index.html.twig', array(
+    return $this->render('HolloPostfixBundle:Default:index.html.twig', array(
       'transports' => $transport
     ));
   }
 
   public function newAction()
   {
-    $transport = new \ITG\PostfixBundle\Entity\Transport;
+    $transport = new \Hollo\PostfixBundle\Entity\Transport;
     $transport->setTransport('smtp:');
 
-    $form = $this->createForm(new \ITG\PostfixBundle\Form\Transport, $transport);
+    $form = $this->createForm(new \Hollo\PostfixBundle\Form\Transport, $transport);
 
     if ($this->getRequest()->getMethod() == 'POST') {
       $form->bindRequest($this->getRequest());
@@ -38,7 +38,7 @@ class DefaultController extends Controller
       }
     }
 
-    return $this->render('ITGPostfixBundle:Default:new.html.twig', array(
+    return $this->render('HolloPostfixBundle:Default:new.html.twig', array(
       'form' => $form->createView()
     ));
   }
@@ -46,9 +46,9 @@ class DefaultController extends Controller
   public function updateAction($id)
   {
     $em = $this->getDoctrine()->getEntityManager();
-    $transport = $em->find('ITGPostfixBundle:Transport', $id);
+    $transport = $em->find('HolloPostfixBundle:Transport', $id);
 
-    $form = $this->createForm(new \ITG\PostfixBundle\Form\Transport, $transport);
+    $form = $this->createForm(new \Hollo\PostfixBundle\Form\Transport, $transport);
 
     if ($this->getRequest()->getMethod() == 'POST') {
       $form->bindRequest($this->getRequest());
@@ -63,7 +63,7 @@ class DefaultController extends Controller
       }
     }
 
-    return $this->render('ITGPostfixBundle:Default:update.html.twig', array(
+    return $this->render('HolloPostfixBundle:Default:update.html.twig', array(
       'form' => $form->createView(),
       'transport' => $transport
     ));
@@ -73,7 +73,7 @@ class DefaultController extends Controller
   {
     $em = $this->getDoctrine()->getEntityManager();
 
-    $transport = $em->find('ITGPostfixBundle:Transport', $id);
+    $transport = $em->find('HolloPostfixBundle:Transport', $id);
 
     $em->remove($transport);
     $em->flush();

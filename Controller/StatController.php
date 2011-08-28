@@ -1,6 +1,6 @@
 <?php
 
-namespace ITG\PostfixBundle\Controller;
+namespace Hollo\PostfixBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -23,7 +23,7 @@ class StatController extends Controller
       $res[ucfirst(preg_replace("/_/", " ", $key))] = $value;
     }
 
-    return $this->render('ITGPostfixBundle:Stat:index.html.twig', array(
+    return $this->render('HolloPostfixBundle:Stat:index.html.twig', array(
       'data' => $res
     ));
   }

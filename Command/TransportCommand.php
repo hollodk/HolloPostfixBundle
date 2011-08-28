@@ -1,6 +1,6 @@
 <?php
 
-namespace ITG\PostfixBundle\Command;
+namespace Hollo\PostfixBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -27,7 +27,7 @@ class TransportCommand extends ContainerAwareCommand
   {
     $options = $input->getOptions();
 
-    $transport = new \ITG\PostfixBundle\Entity\Transport;
+    $transport = new \Hollo\PostfixBundle\Entity\Transport;
     $transport->setDomain($options['domain']);
     $transport->setTransport($options['transport']);
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ITG\PostfixBundle\Entity;
+namespace Hollo\PostfixBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 

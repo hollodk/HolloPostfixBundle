@@ -1,19 +1,19 @@
 homepage:
     pattern:  /
-    defaults: { _controller: ITGPostfixBundle:Default:index }
+    defaults: { _controller: HolloPostfixBundle:Default:index }
 
 new:
     pattern:  /new
-    defaults: { _controller: ITGPostfixBundle:Default:new }
+    defaults: { _controller: HolloPostfixBundle:Default:new }
 
 update:
     pattern:  /update/{id}
-    defaults: { _controller: ITGPostfixBundle:Default:update }
+    defaults: { _controller: HolloPostfixBundle:Default:update }
 
 delete:
     pattern:  /delete/{id}
-    defaults: { _controller: ITGPostfixBundle:Default:delete }
+    defaults: { _controller: HolloPostfixBundle:Default:delete }
 
 stat:
     pattern:  /stat
-    defaults: { _controller: ITGPostfixBundle:Stat:index }
+    defaults: { _controller: HolloPostfixBundle:Stat:index }

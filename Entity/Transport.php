@@ -1,15 +1,15 @@
 <?php
 
-namespace ITG\PostfixBundle\Entity;
+namespace Hollo\PostfixBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * ITG\PostfixBundle\Entity\Transport
+ * Hollo\PostfixBundle\Entity\Transport
  *
  * @ORM\Table(name="transport")
- * @ORM\Entity(repositoryClass="ITG\PostfixBundle\Entity\TransportRepository")
+ * @ORM\Entity(repositoryClass="Hollo\PostfixBundle\Entity\TransportRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Transport
