@@ -1,0 +1,22 @@
+PostfixBundle
+=============
+:Author: Michael Holm <hollo@hollo.dk>
+:Date:   2011-08-28
+
+
+Introduction
+------------
+
+This bundle is for Symfony2.
+
+It will make a perfect transport gateway for Postfix, if you for instance want to make a web interface for a Antispam / Antivirus gateway.
+
+There is an example config in Resources/docs/postfix for how to set postfix up to fit this bundle.
+
+
+CLI examples
+------------
+
+If you dont want to use the webinterface you can just as well use the CLI.
+
+php app/console pf:transport --domain=hollo.dk --transport smtp:mail.hollo.dk

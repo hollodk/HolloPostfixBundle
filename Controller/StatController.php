@@ -9,6 +9,7 @@ class StatController extends Controller
 {
   public function indexAction()
   {
+    // read any ini file and insert into table view
     $file = '/home/itg/data.txt';
 
     if (!is_readable($file)) {
