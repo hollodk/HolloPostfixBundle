@@ -1,0 +1,19 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: ITGPostfixBundle:Default:index }
+
+new:
+    pattern:  /new
+    defaults: { _controller: ITGPostfixBundle:Default:new }
+
+update:
+    pattern:  /update/{id}
+    defaults: { _controller: ITGPostfixBundle:Default:update }
+
+delete:
+    pattern:  /delete/{id}
+    defaults: { _controller: ITGPostfixBundle:Default:delete }
+
+stat:
+    pattern:  /stat
+    defaults: { _controller: ITGPostfixBundle:Stat:index }

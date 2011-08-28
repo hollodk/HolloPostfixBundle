@@ -1,0 +1,7 @@
+parameters:
+#    itg_postfix.example.class: ITG\PostfixBundle\Example
+
+services:
+#    itg_postfix.example:
+#        class: %itg_postfix.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+<form method="post" action="{{ path('update', {'id':transport.id}) }}">
+{% include "ITGPostfixBundle:Default:form.html.twig" %}
+</form>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% block field_errors %}
+{% spaceless %}
+    {% if errors|length > 0 %}
+        {% for error in errors %}
+            <span class="smaller err">Error: {{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</span><br />
+        {% endfor %}
+    {% endif %}
+{% endspaceless %}
+{% endblock field_errors %}
+

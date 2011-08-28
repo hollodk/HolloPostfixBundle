@@ -1,0 +1,20 @@
+<fieldset>
+  <legend>Transport</legend>
+    <p>
+      {{ form_label(form.domain) }}<br />
+      {{ form_widget(form.domain, {'attr':{'class':'input-text-02'}}) }}<br />
+      {{ form_errors(form.domain) }}
+      <span class="smaller low">Info: example.com</span>
+    </p>
+    <p>
+      {{ form_label(form.transport) }}<br />
+      {{ form_widget(form.transport, {'attr':{'class':'input-text-02'}}) }}<br />
+      {{ form_errors(form.transport) }}
+      <span class="smaller low">Info: smtp:mail.example.com</span>
+
+    </p>
+
+    {{ form_rest(form) }}
+    <input type="submit" class="input-submit" />
+  </legend>
+</fieldset>
