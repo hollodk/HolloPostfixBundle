@@ -20,3 +20,17 @@ CLI examples
 If you dont want to use the webinterface you can just as well use the CLI.
 
 php app/console pf:transport --domain=hollo.dk --transport smtp:mail.hollo.dk
+
+
+Symfony2 Deps
+-------------
+
+Make Symfony2 take care of this bundle simply by adding it to your deps file in the root folder.
+
+[HolloPostfixBundle]
+  git=http://github.com/hollodk/PostfixBundle.git
+  target=/bundles/Hollo/PostfixBundle
+
+Now add the bundle to the AppKernel and autoload file as usual the symfony2 way.
+
+Upgrade by simple executing ./bin/vendors install, thats exactly the same way as you upgrade your symfony installation.
